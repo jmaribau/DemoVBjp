@@ -35,8 +35,8 @@ abstract class NodeAbstract implements NodeInterface
      */
     public function __construct(string $name)
     {
-        $this->name = $name;
-        $this->date = new DateTime();
+        $this->setName($name);
+        $this->setDate(new DateTime());
     }
 
     /**
