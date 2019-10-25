@@ -29,6 +29,7 @@
     "scripts": {
         "tests": "php vendor/phpunit/phpunit/phpunit tests/",
         "tests-show": "php vendor/phpunit/phpunit/phpunit tests/ --testdox",
+        "coverage": "php vendor/phpunit/phpunit/phpunit tests/ --whitelist src/ --coverage-text --testdox",
 
         "qa1": ["@qa-phplint", "@qa-phpstan", "@qa-phpmd", "@qa-phpcpd"],
         "qa2": ["@qa-phpcs", "@qa-phpcsf"],

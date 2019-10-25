@@ -13,7 +13,6 @@ use VirtualFileSystem\Node\NodeInterface;
 
 /**
  * @internal
- * @covers \Folder
  */
 final class FolderTest extends TestCase
 {

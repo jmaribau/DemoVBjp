@@ -95,6 +95,54 @@ Time: 234 ms, Memory: 4.00 MB
 OK (6 tests, 24 assertions)
 ````
 
+## Coverage
+Type `$ composer coverage`
+````
+λ composer coverage
+> php vendor/phpunit/phpunit/phpunit tests/ --whitelist src/ --coverage-text --testdox
+PHPUnit 8.4.1 by Sebastian Bergmann and contributors.
+
+Part1 (VirtualFileSystem\Tests\Part1)
+ ✔ Part 1
+
+File (VirtualFileSystem\Tests\File)
+ ✔ File create
+ ✔ File to array
+ ✔ Setters getters
+
+Folder (VirtualFileSystem\Tests\Folder)
+ ✔ Folder create
+ ✔ Add child
+ ✔ Remove child
+ ✔ Remove all children
+ ✔ To array
+
+View (VirtualFileSystem\Tests\View)
+ ✔ Setters getters
+
+Time: 316 ms, Memory: 6.00 MB
+
+OK (10 tests, 35 assertions)
+
+
+Code Coverage Report:
+  2019-10-25 10:15:05
+
+ Summary:
+  Classes: 100.00% (4/4)
+  Methods: 100.00% (29/29)
+  Lines:   100.00% (78/78)
+
+\VirtualFileSystem\Folder::VirtualFileSystem\Folder\File
+  Methods: 100.00% ( 1/ 1)   Lines: 100.00% (  2/  2)
+\VirtualFileSystem\Folder::VirtualFileSystem\Folder\Folder
+  Methods: 100.00% ( 5/ 5)   Lines: 100.00% ( 13/ 13)
+\VirtualFileSystem\Node::VirtualFileSystem\Node\NodeAbstract
+  Methods: 100.00% ( 8/ 8)   Lines: 100.00% ( 13/ 13)
+\VirtualFileSystem\View::VirtualFileSystem\View\View
+  Methods: 100.00% (15/15)   Lines: 100.00% ( 50/ 50)
+````
+
 ## Quality Tools
 
 #### PHPLint
@@ -201,6 +249,7 @@ Time: 69 ms, Memory: 4.00 MB
 "scripts": {
         "tests": "php vendor/phpunit/phpunit/phpunit tests/",
         "tests-show": "php vendor/phpunit/phpunit/phpunit tests/ --testdox","
+        "coverage": "vendor/phpunit/phpunit/phpunit tests/ --coverage-text",
 
         "qa1": ["@qa-phplint", "@qa-phpstan", "@qa-phpmd", "@qa-phpcpd"],
         "qa2": ["@qa-phpcs", "@qa-phpcsf"],
