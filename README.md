@@ -53,7 +53,7 @@ echo $view->render()
 
 ### Result
 ````
-$ php part1.php
+$ php index.php
 
 Home > MyProject
 
