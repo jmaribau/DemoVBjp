@@ -79,6 +79,5 @@ final class Part1Test extends TestCase
 
         $this->assertStringContainsString('. /', $imagesRender);
         $this->assertStringContainsString('.. /', $imagesRender);
-
     }
 }

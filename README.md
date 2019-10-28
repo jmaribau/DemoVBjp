@@ -15,9 +15,9 @@ $ composer install
 ````
 
 ## Use
-`$ php part1.php`
+`$ php index.php`
 
-## Part1.php
+## Index.php
 ### Code
 ````
 <?php
